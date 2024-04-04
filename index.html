@@ -3,8 +3,21 @@
 <head>
   <meta charset="utf-8">
   <title>SUrE!</title>
+  <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
 </head>
 <body>
 <h1>bd-life is currently working...</h1>
+<!--<input id="code" value="sum([1, 2, 3, 4, 5])" />
+    <button onclick="evaluatePython()">Run</button>
+-->    
+<script type="text/javascript">
+async function main(){
+let pyodide = await loadPyodide();
+console.log(pyodide.runPython(`
+print(1 + 2)
+`))
+};
+main();
+</script>
 </body>
 </html>
